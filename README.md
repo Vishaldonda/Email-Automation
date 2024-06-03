@@ -1,2 +1,4 @@
 # Email-Automation
-The  Automate sending the list of Emails using automation tool "PlayWright"
+The Automation Enables sending to the list of Emails from the PDF attached using automation tool "PlayWright" 
+  - Will be Abole to send 120 mails per minute!
+  - The Initial-Setup was simple using PlayWright.
