@@ -26,13 +26,13 @@ async function getCompaniesFromPDF(pdfPath) {
   const companies = await getCompaniesFromPDF('Banglore IT Companies List.pdf');
 
   // Email content
-  const subject = "Application for software developer - Donda Vishal";
+  const subject = "Application for software developer - 'Your Name'";
   const body = `
     Hi,
 
-    I hope this email finds you well. This is Donda Vishal graduated from IIIT Sricity.
+    I hope this email finds you well. This is 'Your Name' graduated from 'Your college'.
 
-    I am writing to express my interest in the software developer position at your company. With a strong background in software development and a passion I myself find interested and excited about the opportunity to contribute. In my previous role at Cambridge Mobile Telematics Company, I was responsible for developing and maintaining their portal of their fleets(drivers).
+    I am writing to express my interest in the software developer position at your company. With a strong background in software development and a passion I myself find interested and excited about the opportunity to contribute. In my previous Company 'xxx', I was responsible for developing and maintaining their portal of their fleets(drivers).
 
     This experience equipped me with the ability to work effectively in a fast-paced environment, collaborate with different teams, across various technologies. I am confident that my skills and experience make me a strong candidate for the role. I am keen to further discuss my background, skills, and previous experience.
 
@@ -40,9 +40,9 @@ async function getCompaniesFromPDF(pdfPath) {
 
     Warm regards,
 
-    Donda Vishal
-    9390365005
-    https://www.linkedin.com/in/donda-vishal-d/
+   'Your Name'
+   'Phno: zzz'
+   'https://www.linkedin.com/in/'xxx'/'
   `;
 
   // Launch browser
@@ -73,13 +73,13 @@ async function getCompaniesFromPDF(pdfPath) {
         page.waitForEvent('filechooser'),
         page.click('div[command="Files"]')
       ]);
-      await fileChooser.setFiles('Vishal Donda\'s CV.pdf');
+      await fileChooser.setFiles('Cashier Resume.pdf');
 
       // Send the email
       await page.click('div[aria-label="Send ‪(Ctrl-Enter)‬"]');
 
       // Wait for the email to be sent
-      await page.waitForTimeout(5000); // Wait for 5 seconds before sending the next email
+      await page.waitForTimeout(5000); // Wait for 3 seconds before sending the next email
     } catch (error) {
       console.error(`Failed to send email to ${company.email}: ${error.message}`);
     }
